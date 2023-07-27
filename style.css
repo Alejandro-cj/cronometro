@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+  }
+  
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(#ff0080, #8000ff); /* Fondo con degradado radial de colores llamativos */
+    font-family: "Arial", sans-serif; /* Fuente más sencilla pero llamativa */
+    color: #fff; /* Texto en color blanco */
+  }
+  
+  .cronometro-container {
+    position: relative;
+  }
+  
+  .cronometro-container,
+  .cronometro,
+  .cronometro-border {
+    height: 200px;
+    width: 200px;
+    box-sizing: border-box;
+    padding: 30px;
+    top: 0;
+    left: 0;
+  }
+  
+  .cronometro {
+    text-align: center;
+    padding: 40px 0px; /* Reducir un poco el padding para centrar mejor el contenido */
+    position: absolute;
+  }
+  
+  .cronometro-border {
+    border: 6px solid #ff00ff; /* Borde en color magenta */
+    border-radius: 50%; /* Bordes redondeados */
+    position: absolute;
+  }
+  
+  .cronometro-border::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background: #00ff00; /* Punto en color verde */
+    border: 4px solid #ffff00; /* Borde en color amarillo */
+    border-radius: 100%;
+    top: 8px;
+    position: absolute;
+  }
+  
+  .cronometro-min {
+    font-size: 64px; /* Tamaño de la fuente aumentado */
+    color: #ffff00; /* Texto en color amarillo */
+  }
+  
+  .cronometro-seg {
+    font-size: 40px; /* Tamaño de la fuente aumentado */
+    color: #00ff00; /* Texto en color verde */
+  }
+  
+  .cronometro-centiseg {
+    color: #ff0000; /* Texto en color rojo */
+    display: inline-block;
+    text-align: left;
+    width: 30px; /* Ancho del elemento aumentado */
+  }
+  
+  .decor {
+    font-size: 28px; /* Tamaño de la fuente reducido */
+    color: #ff00ff; /* Texto en color magenta */
+  }
+  
+  .rotar {
+    animation: rotar infinite 3s; /* Velocidad de rotación aumentada */
+  }
+  
+  @keyframes rotar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .cronometro-opciones {
+    margin-top: 40px; /* Espacio entre el cronómetro y las opciones aumentado */
+  }
+  
+  .cronometro-opciones button {
+    font-family: "Arial", sans-serif; /* Fuente más sencilla pero llamativa */
+    font-weight: bold;
+    color: #fff; /* Texto en color blanco */
+    letter-spacing: 4px; /* Espaciado entre letras aumentado */
+    border: 3px solid #00ff00; /* Borde en color verde */
+    background: #ff00ff; /* Fondo en color magenta */
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px 25px; /* Padding aumentado */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  
+  #cronometro-iniciar {
+    font-size: 30px; /* Tamaño de la fuente aumentado */
+  }
+  
+  .cronometro-opciones button:active {
+    color: #ffff00; /* Texto en color amarillo al hacer clic */
+  }
+  
